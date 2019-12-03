@@ -82,7 +82,7 @@ public class NotificationThread implements Runnable, PushQueue {
 	 * @param notificationManager the notification manager to use
 	 * @param server the server to communicate with
 	 * @param payload a payload to push
-	 * @param devices a list or an array of tokens or devices: {@link java.lang.String String[]}, {@link java.util.List}<{@link java.lang.String}>, {@link javapns.devices.Device Device[]}, {@link java.util.List}<{@link javapns.devices.Device}>, {@link java.lang.String} or {@link javapns.devices.Device}
+	 * @param devices a list or an array of tokens or devices: {@link java.lang.String String[]}, {@link java.util.List}{@literal <}{@link java.lang.String}{@literal >}, {@link javapns.devices.Device Device[]}, {@link java.util.List}{@literal <}{@link javapns.devices.Device}{@literal >}, {@link java.lang.String} or {@link javapns.devices.Device}
 	 */
 	public NotificationThread(NotificationThreads threads, PushNotificationManager notificationManager, AppleNotificationServer server, Payload payload, Object devices) {
 		this.thread = new Thread(threads, this, "JavaPNS" + (threads != null ? " grouped" : " standalone") + " notification thread in LIST mode");
@@ -101,7 +101,7 @@ public class NotificationThread implements Runnable, PushQueue {
 	 * @param threads the parent NotificationThreads object that is coordinating multiple threads
 	 * @param notificationManager the notification manager to use
 	 * @param server the server to communicate with
-	 * @param messages a list or an array of PayloadPerDevice: {@link java.util.List}<{@link javapns.notification.PayloadPerDevice}>, {@link javapns.notification.PayloadPerDevice PayloadPerDevice[]} or {@link javapns.notification.PayloadPerDevice}
+	 * @param messages a list or an array of PayloadPerDevice: {@link java.util.List}{@literal <}{@link javapns.notification.PayloadPerDevice}{@literal >}, {@link javapns.notification.PayloadPerDevice PayloadPerDevice[]} or {@link javapns.notification.PayloadPerDevice}
 	 */
 	public NotificationThread(NotificationThreads threads, PushNotificationManager notificationManager, AppleNotificationServer server, Object messages) {
 		this.thread = new Thread(threads, this, "JavaPNS" + (threads != null ? " grouped" : " standalone") + " notification thread in LIST mode");
@@ -118,7 +118,7 @@ public class NotificationThread implements Runnable, PushQueue {
 	 * @param notificationManager the notification manager to use
 	 * @param server the server to communicate with
 	 * @param payload a payload to push
-	 * @param devices a list or an array of tokens or devices: {@link java.lang.String String[]}, {@link java.util.List}<{@link java.lang.String}>, {@link javapns.devices.Device Device[]}, {@link java.util.List}<{@link javapns.devices.Device}>, {@link java.lang.String} or {@link javapns.devices.Device}
+	 * @param devices a list or an array of tokens or devices: {@link java.lang.String String[]}, {@link java.util.List}{@literal <}{@link java.lang.String}{@literal >}, {@link javapns.devices.Device Device[]}, {@link java.util.List}{@literal <}{@link javapns.devices.Device}{@literal >}, {@link java.lang.String} or {@link javapns.devices.Device}
 	 */
 	public NotificationThread(PushNotificationManager notificationManager, AppleNotificationServer server, Payload payload, Object devices) {
 		this(null, notificationManager, server, payload, devices);
@@ -130,7 +130,7 @@ public class NotificationThread implements Runnable, PushQueue {
 	 * 
 	 * @param notificationManager the notification manager to use
 	 * @param server the server to communicate with
-	 * @param messages a list or an array of PayloadPerDevice: {@link java.util.List}<{@link javapns.notification.PayloadPerDevice}>, {@link javapns.notification.PayloadPerDevice PayloadPerDevice[]} or {@link javapns.notification.PayloadPerDevice}
+	 * @param messages a list or an array of PayloadPerDevice: {@link java.util.List}{@literal <}{@link javapns.notification.PayloadPerDevice}{@literal >}, {@link javapns.notification.PayloadPerDevice PayloadPerDevice[]} or {@link javapns.notification.PayloadPerDevice}
 	 */
 	public NotificationThread(PushNotificationManager notificationManager, AppleNotificationServer server, Object messages) {
 		this(null, notificationManager, server, messages);
